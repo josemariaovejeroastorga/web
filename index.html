@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<!--Aquí incorporo el logo como .ico y le cambio el título a la pestaña-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Obelisco Real State</title>
+    <link rel="icon" href="C:Users\Usuario\Documents\Github\web\img\Favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="fonts/GreatVibes-Regular.ttf">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -14,9 +20,10 @@
 
 <body>
     <header class="transparente">
-        <img src="img/logo.svg" alt="Logo obelisco Real State">
+        <img src="img/Obelisco (2).png" alt="Logo obelisco Real State">
+        <p>"El lugar ... donde el sueño de tu casa se hace realidad"</p>
         <nav>
-            <a href="index.html" class="activo">Inicio</a>
+            <a href="index.html" class="activo Inicio">Inicio</a>
             <a href="Ventas.html">Venta</a>
             <a href="alquiler.html">Alquiler</a>
             <a href="contacto_nuevo.html">Contacto</a>
@@ -28,7 +35,7 @@
         <div></div>
 
         <div class="hero-logo">
-            <img src="/img/Obelisco (2).png" alt="Logo Obelisco Real State">
+            <img src="img/logo.svg" alt="Logo Obelisco Real State">
         </div>
         <a href="#abajo" class="hero-down">
             <img src="img/down.svg" alt="flecha abajo">
@@ -36,10 +43,10 @@
 
     </div>
 
-    <div id="burger">
-        <div class="barra superior"></div>
-        <div class="barra media"></div>
-        <div class="barra inferior"></div>
+    <div class="burger">
+        <div class="line top"></div>
+        <div class="line medium"></div>
+        <div class="line bottom"></div>
     </div>
     <div class="menu">
         <nav>
@@ -55,7 +62,7 @@
     </div>
 
     <div class="fila primera">
-        <span id="pr">&nbsp;</span>
+        <!--<span id="pr">&nbsp;</span>-->
         <div class="col-66">
             <p>"Desde los Cimientos: La Historia de Obelisco Real State en Buenos Aires"
                 Hace más de una década, en el corazón de Buenos Aires, nació una visión audaz y una pasión compartida
@@ -74,19 +81,20 @@
 
     </div>
     <!--prueba 1 git-->
-    <div class="fila">
-        <div class="col-50">
+    <div class="fila primera">
+        <div class="col-33">
             <img src="img/thumb8.jpg" alt="">
         </div>
-        <div class="col-50">
+            <div class="col-66">
             <p>Forjando Alianzas Locales
                 Armados con determinación y una comprensión sólida del mercado local, estos emprendedores comenzaron a
                 tejer una red de
                 contactos con arquitectos, constructores y agentes inmobiliarios locales. Su compromiso con la comunidad
                 los hizo
                 rápidamente aceptados en los círculos inmobiliarios de la ciudad.</p>
-
+            </div>
         </div>
+    </div>
         <div class="fila">
             <div class="col-50 caja-nav flex-column-center ">
                 <img src="img/comprar.svg" alt="">
@@ -103,7 +111,7 @@
       <br>
     <div class="fila parallax">
         <div class="col-100">
-            <p>"Donde los Sueños de Hogar se Hacen Realidad"</p>
+            <p>"El lugar ... donde el sueño de tu casa se hace realidad"</p>
         </div>
     </div>
 

@@ -1,10 +1,10 @@
 /*fuentes*/
 @font-face {
     font-family: "Avenir";
-    src: url('../fonts/Avenir-Book.ttf');
+    src: url('../GreatVibes-Regular.ttf');
 }
 
-/*receteo de todos los elemento*/
+/*reseteo de todos los elementos*/
 * {
     margin: 0;
     padding: 0;
@@ -17,20 +17,20 @@ a {
     color: inherit;
 }
 
-/*Estilos Generales*/
+/*Estilos Generales cambio el valor del atributo font-size = 1rem para que sea proporcional al viewport*/
 html {
-    font-size: 20px;
+    font-size: 1rem;
 
 }
 
 @media (max-width :440px) {
     html {
-        font-size: 18px;
+        font-size: 0.8rem;
     }
 }
 
 body {
-    font-size: "Avenir", sans-serif;
+    font-family: "Avenir-Book, GreatVibes_Regular, sans-serif";
     color: #67666e;
     background-color:rgba(197, 197, 186, 0.226)
 }
@@ -47,7 +47,7 @@ p {
 /*Hero */
 
 .hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: black;
     position: absolute;
@@ -56,7 +56,7 @@ p {
     overflow: hidden;
 }
 
-/*animacion*/
+/*animación*/
 @keyframes heroAnimation {
     0% {
         opacity: 0;
@@ -81,7 +81,7 @@ p {
     }
 
 }
-/*logo detro de alquiler y venta*/
+/*logo dentro de alquiler y venta*/
 
 
 .hero div {
@@ -118,7 +118,7 @@ p {
     transform: translate(-50%, -50%);
     animation: none;
     opacity: 1;
-    width: 20%;
+    width: 10%;
     height: auto;
 }
 
@@ -134,42 +134,52 @@ p {
 
 }
 
-@media (max-width: 720px) {
-    .hero .hero-logo {
-        width: 60%;
-    }
 
-    .hero .hero-down {
-        width: 15%;
-    }
-}
-
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
     .hero .hero-logo {
-        width: 80%;
+        width: 20%;
+        font-size: 1rem;
     }
 
     .hero .hero-down {
         width: 20%;
     }
 }
+@media (max-width: 850px) {
+    .hero .hero-logo {
+        width: 15%;
+    }
 
+    .hero .hero-down {
+        width: 15%;
+    }
+}
+@media (max-width: 400px) {
+    .hero .hero-logo {
+        width: 10%;
+    
+    }
 
-/* HEADER barra de navegacion*/
+    .hero .hero-down {
+        width: 10%;
+    }
+}
+
+/* HEADER barra de navegacion, cambio el encabezado para darle mas importancia al slogan*/
 
 header {
     background-color: white;
     box-shadow: 1.5px 1.5px 4px #b3b3b3;
-    height: 80px;
+    height: 180px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
     transition: 600ms ease-in-out all;
 }
 
@@ -179,17 +189,38 @@ header.transparente {
 }
 
 header img {
-    height: 60px;
+    height: 15vh;
     width: auto;
+    position: relative;
+    top: 15%;
+    left: 1.5%;
 }
+header p {
+    font-size: 1.75rem;
+    color: black;
+    position: fixed;
+    top: 9.5vh;
+    left: 19.5vh;
+}
+header nav {
+    height: 3.5vh;
+    color: black;
+    position: fixed;
+    top: 5px;
+    left: 5px;
 
+}
 header nav a {
     color: #67666e;
     font-weight: normal;
-    margin-left: 1em;
+    margin-left: 1rem;
     transition: 300ms ease-in-out all;
 }
+header nav a.Inicio {
+    margin-top: 0px;
+    left: 0px;
 
+}
 header.transparente nav a {
     color: black
 }
@@ -207,16 +238,40 @@ header.transparente nav a:hover {
 
 /* Botón burger */
 
-#burger {
+.burger {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: 1vh;
+    left: 90vw;
     cursor: pointer;
     z-index: 10;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1px;
 }
-
-#burger .barra {
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: white; /* Color de las líneas */
+    margin: 1px 0;
+  }
+  .line .top {
+    position: absolute;
+    left: 3vw;
+    top: 3vw;
+  }
+  .line .medium {
+    position: absolute;
+    left: 3vw;
+    top: 9vw;
+  }
+  .line .bottom {
+    position: absolute;
+    left: 3vw;
+    top: 12vw;
+  }
+ #burger .barra {
     width: 30px;
     height: 2px;
     margin: 6px;
@@ -240,14 +295,14 @@ header.transparente nav a:hover {
     transform: translateY(-8px) rotateZ(-45deg);
 }
 
-/*ocultar el menu amburguesa cuandoesta chico*/
+/*ocultar el menu hamburguesa cuando esta chico*/
 @media(max-width: 620px) {
     #burger {
         display: block;
     }
 
     header {
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     header nav {
