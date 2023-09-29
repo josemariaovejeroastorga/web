@@ -360,7 +360,9 @@ header.transparente nav a:hover {
 .primera {
     margin-top: 100vh;
 }
-
+.segunda {
+    margin-top: 0vh;
+}
 #pr,
 #legal,
 #cookies {
