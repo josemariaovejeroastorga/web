@@ -21,8 +21,39 @@ a {
 a:hover {
     padding-bottom: 0.25rem;
     border-bottom: 0.1rem solid white;
+    transform:scale(1.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
+nav ul li {
+    position: relative;
+    left: -12vw;
+    padding: 0.37vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    z-index: 10;
+    opacity: 0;
+    visibility: visible;
+    transition: all 0.3s ease;
 
+}
+nav ul li:hover {
+    visibility: visible;
+    opacity: 1;
+    top: 0.73vh;
+}
+/*nav ul li::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 35px;
+
+}*/
 /*Estilos Generales cambio el valor del atributo font-size = 1rem para que sea proporcional al viewport*/
 html {
     font-size: 1rem;
@@ -37,7 +68,7 @@ html {
 
 body {
     font-family: "Avenir-Book, GreatVibes_Regular, sans-serif";
-    color: white;
+    color:white;
     background-color:rgba(197, 197, 186, 0.226)
 }
 
@@ -249,7 +280,7 @@ header.transparente nav a {
 
 header nav a.activo,
 header nav a:hover {
-    color: #a97c50;
+    color: skyblue;
     font-weight: bold;
     transition: 300ms ease-in-out all;
     transform: translateX(30.3rem);
@@ -257,7 +288,7 @@ header nav a:hover {
 
 header.transparente nav a.activo,
 header.transparente nav a:hover {
-    color: #a97c50;
+    color: skyblue;
     transition: 300ms ease-in-out all;
     transform: translateX(0.3rem);
 }
@@ -265,9 +296,11 @@ header.transparente nav a:hover {
 /* Botón burger */
 
 .burger {
+    height: 10%;
+    color: white;
     position: fixed;
     top: 1vh;
-    left: 90vw;
+    left: 85vw;
     cursor: pointer;
     z-index: 10;
     display: flex;
@@ -339,18 +372,43 @@ header.transparente nav a:hover {
 /* Menú lateral */
 
 .menu {
-    width: 360px;
-    height: 100vh;
-    background-color: #2d3e4e9a;
-    border-radius: 30px;
-    position: fixed;
-    top: 0;
-    left: -360px;
-    padding-top: 40px;
-    transition: all 700ms ease-in-out;
+    width: 18vw;
+    height: 10px;
+    position: relative;
+    top: 3.3vh;
+    left: 0vw;
+    padding-top: 0px;
+    color:black;
+    transition: all 300ms ease-in-out;
 }
 
-.menu.abierto {
+/*nav > ul {
+    padding: 0.7vh;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.73rem;
+    position: relative;
+    top: 5.1vh;
+    left: 0vw;
+    display: flex;
+    width: 12vw;
+}*/
+/*nav > ul > li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}*/
+/*nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0.7vh;
+    text-transform: uppercase;
+}*/
+    
+/*.menu.abierto {
     left: 0;
 }
 
@@ -369,7 +427,7 @@ header.transparente nav a:hover {
 
 .menu nav a:hover {
     color: white;
-}
+}*/
 
 .menu .copyright {
     color: rgba(34, 2, 17, 0.75);
@@ -391,7 +449,7 @@ header.transparente nav a:hover {
 }
 .tercera {
     margin-top: 0vh;
-    height: 35vh;
+    height: 45vh;
     width: auto;
 }
 #pr,
@@ -453,7 +511,7 @@ header.transparente nav a:hover {
 
 @media (max-width: 720px) {
     .fila {
-        flex-direction: column;
+        flex-direction: row;
         padding: 1rem 0.5rem;
     }
 
@@ -497,6 +555,15 @@ header.transparente nav a:hover {
 }
 
 .flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+
+}
+.flex-row-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -559,8 +626,8 @@ header.transparente nav a:hover {
 }
 
 .fila.parallax div p {
-    font-size: 1.5rem;
-    color: #a97c50;
+    font-size: 1rem;
+    color: darkblue;
     text-align: center;
 }
 
@@ -666,17 +733,19 @@ input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"]+label::before {
+/*input[type="checkbox"]+label::before {
     content: url('../img/square.svg');
     position: relative;
     top: 5px;
     padding-right: 5px;
+    display: none;
 }
 
 input[type="checkbox"]:checked+label::before {
     content: url('../img/check-square.svg');
+    display: none;
 
-}
+}*/
 
 /* FOOTER*/
 
