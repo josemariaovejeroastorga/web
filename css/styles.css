@@ -207,6 +207,13 @@ h2 {
     .hero .hero-down {
         width: 15%;
     }
+    header p {
+        font-size: 0.7rem;
+        color: black;
+        position: fixed;
+        top: 9.5vh;
+        left: 19.5vh;
+    }
 }
 @media (max-width: 400px) {
     .hero .hero-logo {
@@ -216,6 +223,13 @@ h2 {
 
     .hero .hero-down {
         width: 10%;
+    }
+    header p {
+        font-size: 0.41rem;
+        color: black;
+        position: fixed;
+        top: 9.5vh;
+        left: 19.5vh;
     }
 }
 
