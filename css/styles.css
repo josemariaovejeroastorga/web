@@ -476,6 +476,7 @@ header.transparente nav a:hover {
 
 .fila {
     display: flex;
+    flex-direction: row;
     padding: 1rem 1rem;
 
 }
@@ -573,7 +574,7 @@ header.transparente nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     height: 100%;
 
 }
@@ -582,11 +583,28 @@ header.transparente nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: 100%;
 
 }
-
+.flex-row-star {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    height: 100%;
+    left:0px;
+}
+.preventa a{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    height: 100%;
+    left:0px;
+}
 /*Espaciados y margenes */
 
 .m-t {
@@ -631,6 +649,7 @@ header.transparente nav a:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 3rem 2rem;
+    z-index: 1;
 
 }
 
@@ -646,6 +665,9 @@ header.transparente nav a:hover {
 }
 
 /*Caja de navegacion*/
+.iconosImg{
+    scale: 0.37;
+}
 
 .caja-nav img {
     width: 73%;
@@ -763,7 +785,9 @@ input[type="checkbox"]:checked+label::before {
 
 /* FOOTER*/
 
-footer {
+footer div {
+    position: relative;
+    top: 127vh;
     background-color: #424242;
 }
 
