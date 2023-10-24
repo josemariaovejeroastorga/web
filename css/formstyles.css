@@ -3,10 +3,12 @@ body {
     background-color: #f0f0f0;
 }
 
-.h1Form {
+footer h1 {
     position: relative;
+    background-color: #337ab7;
+    width: 65vw;
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    background-color: #337ab7;
    width: 17.97vw;
 }
